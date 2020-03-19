@@ -9,7 +9,7 @@ int Periode_en_Tck = 72*10*3;
 
 int main(void)
 {
-			// activation de la PLL qui multiplie la fréquence du quartz par 9
+		// activation de la PLL qui multiplie la fréquence du quartz par 9
 		CLOCK_Configure();
 		// config port PB1 pour être utilisé en sortie
 		GPIO_Configure(GPIOB, 1, OUTPUT, OUTPUT_PPULL);

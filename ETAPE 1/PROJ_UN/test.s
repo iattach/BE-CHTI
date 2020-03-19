@@ -14,11 +14,12 @@ timer_callback proc
 	LDRSB R9,[r10]
 	MVN r9,r9
 	STRB r9,[r10]
-	ENDP 
+	
 	
 		
 	CMP r9,#0
-	BP on
+	BEQ on
+
 	; mise a 1 de PB1
 	ldr	r3, =GPIOB_BSRR
 	mov	r1, #0x00000002
@@ -31,7 +32,8 @@ on
 	str	r1, [r3]
 
 ; N.B. le registre BSRR est write-only, on ne peut pas le relire	
-out BX lr
+out 	BX lr
+	endp
 	end
 
 	
