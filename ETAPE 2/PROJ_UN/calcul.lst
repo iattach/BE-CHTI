@@ -1,0 +1,134 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 thumb
+    2 00000000         
+    3 00000000                 area             madata, data, readwrite
+    4 00000000         
+    5 00000000                 export           calcul
+    6 00000000         
+    7 00000000                 area             moncode, code, readonly
+    8 00000000                 import           TabSin
+    9 00000000                 import           TabCos
+   10 00000000         
+   11 00000000         calcul  proc
+   12 00000000 B500            push             {lr}        ;l'adresse de la pr
+                                                            ogramme dans la pil
+                                                            e
+   13 00000002 B410            push             {r4}        ;le valeur de i dan
+                                                            s c dans la pile
+   14 00000004 F04F 0C01       mov              r12 ,#1     ;donner 2 octets da
+                                                            ns r12
+   15 00000008 FB00 F00C       mul              r0,r0,r12   ;r0=i en c ,calcul 
+                                                            le d√©calage de l'a
+                                                            dresse dans le sin 
+                                                            et cos
+   16 0000000C B420            push             {r5}        ;   ;utiliser r5
+   17 0000000E 4D0A            ldr              r5,=TabSin  ;r5=sin
+   18 00000010 B440            push             {r6}        ;utiliser r6
+   19 00000012 4E0A            ldr              r6,=TabCos  ;r6=cos
+   20 00000014 F935 1010       ldrsh            r1,[r5,r0,lsl #1] ;r1=r5+r0*2^1
+                                                             (lsl #1=decalage √
+                                                            † gauche =2^#1=10(b
+                                                            inaire))
+   21 00000018 F936 2010       ldrsh            r2,[r6,r0,lsl #1] ;r2=r6+r0*2^1
+                                                            
+   22 0000001C BC40            pop              {r6}        ;r5 vider
+   23 0000001E BC20            pop              {r5}        ;r6 vider
+   24 00000020         
+   25 00000020 4409            add              r1,r1,r1    ;r1=r1.F*r1.F sin^2
+                                                            
+   26 00000022 F421 4100       AND              r1,#0xFFFF7FFF
+   27 00000026 4412            add              r2,r2,r2    ;r2=r2.F*r2.F cos^2
+                                                            
+   28 00000028 F422 4200       AND              r2,#0xFFFF7FFF
+   29 0000002C EB01 0002       add              r0,r1,r2    ;r0=r1+r2 sin^2+cos
+                                                            ^2
+   30 00000030 BC10            pop              {r4}        ;
+   31 00000032 F85D EB04       pop              {lr}
+   32 00000036 4770            bx               lr          ;sauter dans l'adre
+                                                            sse de la fonction 
+                                                            de c
+   33 00000038         
+   34 00000038                 endp
+   35 00000038                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\calcul.d -o.\obj\calcul.o -I.\RTE\_Simu -ID:\Users\machilus\
+AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -ID:\Users\machilus\
+AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__
+EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SET
+A 529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=calc
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+ul.lst Calcul.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+madata 00000000
+
+Symbol: madata
+   Definitions
+      At line 3 in file Calcul.s
+   Uses
+      None
+Comment: madata unused
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+calcul 00000000
+
+Symbol: calcul
+   Definitions
+      At line 11 in file Calcul.s
+   Uses
+      At line 5 in file Calcul.s
+Comment: calcul used once
+moncode 00000000
+
+Symbol: moncode
+   Definitions
+      At line 7 in file Calcul.s
+   Uses
+      None
+Comment: moncode unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+TabCos 00000000
+
+Symbol: TabCos
+   Definitions
+      At line 9 in file Calcul.s
+   Uses
+      At line 19 in file Calcul.s
+Comment: TabCos used once
+TabSin 00000000
+
+Symbol: TabSin
+   Definitions
+      At line 8 in file Calcul.s
+   Uses
+      At line 17 in file Calcul.s
+Comment: TabSin used once
+2 symbols
+342 symbols in table
