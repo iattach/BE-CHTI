@@ -393,14 +393,39 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>Trigo.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\Trigo.asm</FilePath>
-            </File>
-            <File>
               <FileName>Calcul.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\Calcul.s</FilePath>
+            </File>
+            <File>
+              <FileName>dft.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\dft.s</FilePath>
+            </File>
+            <File>
+              <FileName>f1p-45.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\f1p-45.asm</FilePath>
+            </File>
+            <File>
+              <FileName>f17p30_f18p135.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\f17p30_f18p135.asm</FilePath>
+            </File>
+            <File>
+              <FileName>f23p-26_f24p-116.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\f23p-26_f24p-116.asm</FilePath>
+            </File>
+            <File>
+              <FileName>Signal.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Signal.asm</FilePath>
+            </File>
+            <File>
+              <FileName>Trigo.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Trigo.asm</FilePath>
             </File>
           </Files>
         </Group>

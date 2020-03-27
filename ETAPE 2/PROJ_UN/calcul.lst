@@ -26,10 +26,12 @@ ARM Macro Assembler    Page 1
                                                             le d√©calage de l'a
                                                             dresse dans le sin 
                                                             et cos
-   16 0000000C B420            push             {r5}        ;   ;utiliser r5
-   17 0000000E 4D0A            ldr              r5,=TabSin  ;r5=sin
-   18 00000010 B440            push             {r6}        ;utiliser r6
-   19 00000012 4E0A            ldr              r6,=TabCos  ;r6=cos
+   16 0000000C B420            push             {r5}        ;   ;empiler/utilis
+                                                            er r5
+   17 0000000E 4D09            ldr              r5,=TabSin  ;r5=sin
+   18 00000010 B440            push             {r6}        ;empiler/utiliser r
+                                                            6
+   19 00000012 4E09            ldr              r6,=TabCos  ;r6=cos
    20 00000014 F935 1010       ldrsh            r1,[r5,r0,lsl #1] ;r1=r5+r0*2^1
                                                              (lsl #1=decalage √
                                                             † gauche =2^#1=10(b
@@ -39,36 +41,36 @@ ARM Macro Assembler    Page 1
    22 0000001C BC40            pop              {r6}        ;r5 vider
    23 0000001E BC20            pop              {r5}        ;r6 vider
    24 00000020         
-   25 00000020 4409            add              r1,r1,r1    ;r1=r1.F*r1.F sin^2
+   25 00000020 FB01 F101       mul              r1,r1,r1    ;r1=r1.F*r1.F sin^2
                                                             
-   26 00000022 F421 4100       AND              r1,#0xFFFF7FFF
-   27 00000026 4412            add              r2,r2,r2    ;r2=r2.F*r2.F cos^2
+   26 00000024         
+   27 00000024 FB02 F202       mul              r2,r2,r2    ;r2=r2.F*r2.F cos^2
                                                             
-   28 00000028 F422 4200       AND              r2,#0xFFFF7FFF
-   29 0000002C EB01 0002       add              r0,r1,r2    ;r0=r1+r2 sin^2+cos
+   28 00000028         
+   29 00000028 EB01 0002       add              r0,r1,r2    ;r0=r1+r2 sin^2+cos
                                                             ^2
-   30 00000030 BC10            pop              {r4}        ;
-   31 00000032 F85D EB04       pop              {lr}
-   32 00000036 4770            bx               lr          ;sauter dans l'adre
+   30 0000002C BC10            pop              {r4}        ;d√©piler/vider r4
+   31 0000002E F85D EB04       pop              {lr}
+   32 00000032 4770            bx               lr          ;sauter dans l'adre
                                                             sse de la fonction 
                                                             de c
-   33 00000038         
-   34 00000038                 endp
-   35 00000038                 end
+   33 00000034         
+   34 00000034                 endp
+   35 00000034                 end
               00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\obj\calcul.d -o.\obj\calcul.o -I.\RTE\_Simu -ID:\Users\machilus\
 AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -ID:\Users\machilus\
 AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine="__
-EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SET
-A 529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=calc
 
 
 
 ARM Macro Assembler    Page 2 
 
 
+EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SET
+A 529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=calc
 ul.lst Calcul.s
 
 
