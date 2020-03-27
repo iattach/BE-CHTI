@@ -20,7 +20,8 @@ f23p-26_f24p-116.asm : fail
 
 Indication pour faire les tests dans l'étape 2
 ----
-Afin de faire les tests différents, veuillez de changer les codes suivants :
+Afin de faire les tests différents, veuillez changer les codes suivants dans le ETAPE 2/PROJ_UN/Src/[principal.c](https://github.com/iattach/BE-CHTI/blob/master/ETAPE%202/PROJ_UN/Src/principal.c):
+
 ```c
 extern short TabSig[64];//importer le signal simulé
 
