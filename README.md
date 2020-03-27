@@ -6,7 +6,7 @@ Etape 1: Fait -> ETAPE 1/PROJ_UN/...<br>
 
 Etape 2.1: Fait -> ETAPE 2/PROJ_UN/Calcul.s<br>
 
-Etape 2.2: en cours -> ETAPE 2/PROJ_UN/dft.s<br>
+Etape 2.2: Fait -> ETAPE 2/PROJ_UN/dft.s<br>
 
 Etape 2 Test
 ----
