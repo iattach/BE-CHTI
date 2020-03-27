@@ -10,32 +10,24 @@ Etape 2.2: en cours -> ETAPE 2/PROJ_UN/dft.s<br>
 
 Etape 2 Test
 ----
-Signal.asm : pass
+Signal.asm : phase 0 degré
 
-f1p-45.asm : pass
+Signal90.asm : phase -90 degrés
 
-f17p30_f18p135.asm : fail
-
-f23p-26_f24p-116.asm : fail
-
-Indication pour faire les tests dans l'étape 2
+Indication pour faire les tests dans l'étape 2.2
 ----
-Afin de faire les tests différents, veuillez changer les codes suivants dans le ETAPE 2/PROJ_UN/Src/[principal.c](https://github.com/iattach/BE-CHTI/blob/master/ETAPE%202/PROJ_UN/Src/principal.c):
+Afin de faire les tests différents, veuillez changer les codes suivants dans le ETAPE 2/PROJ_UN/Src/principal.c:
 
-```c
+```
 extern short TabSig[64];//importer le signal simulé
 
 res[k]=Mk(TabSig,k);
 ```
-Changez ici `TabSig` avec les noms suivant:
+Changez ici TabSig avec les noms suivant:
 
->Signal.asm : `TabSig`
+Signal.asm : TabSig
 
->f1p-45.asm : `TabSig1`
-
->f17p30_f18p135.asm : `TabSig2`
-
->f23p-26_f24p-116.asm : `TabSig3`
+Signal90.asm : TabSig1
 
 Rapport
 ----
