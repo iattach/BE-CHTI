@@ -18,7 +18,7 @@ f17p30_f18p135.asm : fail
 
 f23p-26_f24p-116.asm : fail
 
-Indication test
+Indication pour faire les tests dans l'étape 2
 ----
 Afin de faire les tests différents, veuillez de changer les codes suivants :
 ```c
@@ -38,4 +38,4 @@ Changez ici `TabSig` avec les noms suivant:
 
 Rapport
 ----
-On a précis dans le [Rapport d’avancement _ BE intégration, partie ASM](https://github.com/iattach/BE-CHTI)
+On a précisé les avancements dans le [Rapport d’avancement _ BE intégration, partie ASM](https://github.com/iattach/BE-CHTI/blob/master/Rapport%20d%E2%80%99avancement%20_%20BE%20int%C3%A9gration%2C%20partie%20ASM.pdf)
