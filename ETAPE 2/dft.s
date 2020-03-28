@@ -53,8 +53,8 @@ Debut
 	ldrsh 	r4,[r0,r3,lsl #1]	;r4=r0+r3*2^1 (lsl #1=decalage à gauche =2^#1=10(binaire))
 					;r0 =>	l'adresse de base du signal
 
-	push	{r5}			;empiler/utiliser r6
-	mul	r5,r3,r1		;r6=r3*r1 =>k*i
+	push	{r5}			;empiler/utiliser r5
+	mul	r5,r3,r1		;r5=r3*r1 =>k*i
 					;r1 => la valeur de k
 	
 	and	r5,#0xBF		;(ik)%N=64 =>0xBF

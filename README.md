@@ -1,5 +1,11 @@
 BE CHTI 
 ==== 
+Groupe
+---
+Julien ROUZOT /
+Yunan HOU /
+Yuyuan YANG
+
 Avancement
 ----
 Etape 1: Fait -> ETAPE 1/PROJ_UN/...<br>
