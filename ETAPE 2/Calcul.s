@@ -9,7 +9,7 @@
 	import TabCos
 		
 calcul proc
-	push	{lr,r4-r6}			;l'adresse de la programme dans la pile
+	push	{lr,r4-r6}		;l'adresse de la programme dans la pile
 
 	mov	r12 ,#1			;donner	2 octets dans r12
 	mul 	r0,r0,r12		;r0=i en c ,calcul le décalage de l'adresse dans le sin et cos
