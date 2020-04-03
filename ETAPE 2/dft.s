@@ -60,7 +60,7 @@ Debut
 	and	r5,#0xBF		;(ik)%N=64 =>0xBF
 	
 	push	{r6}			;empiler/utiliser r5	recupperer cos/sin dans r5
-	ldrsh 	r6,[r2,r5,lsl #1]	;r5=r2+r6*2^1 (lsl #1=decalage à gauche =2^#1=10(binaire))
+	ldrsh 	r6,[r2,r5,lsl #1]	;r6=r2+r5*2^1 (lsl #1=decalage à gauche =2^#1=10(binaire))
 					;r2 l'adresse de la table (cos ou sin)
 	
 	mul 	r4,r4,r6		;x/signal(i)*sin/cos(ik2pi/N)

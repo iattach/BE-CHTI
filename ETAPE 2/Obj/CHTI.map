@@ -38,8 +38,9 @@ Removing Unused input sections from the image.
     Removing calcul.o(moncode), (60 bytes).
     Removing dft.o(madata), (0 bytes).
     Removing signal90.o(Signal), (128 bytes).
+    Removing signala0.5.o(Signal), (128 bytes).
 
-5 unused section(s) (total 700 bytes) removed from the image.
+6 unused section(s) (total 828 bytes) removed from the image.
 
 ==============================================================================
 
@@ -50,13 +51,13 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
@@ -65,6 +66,7 @@ Image Symbol Table
     Calcul.s                                 0x00000000   Number         0  calcul.o ABSOLUTE
     Signal.asm                               0x00000000   Number         0  signal.o ABSOLUTE
     Signal90.asm                             0x00000000   Number         0  signal90.o ABSOLUTE
+    SignalA0.5.asm                           0x00000000   Number         0  signala0.5.o ABSOLUTE
     Src\principal.c                          0x00000000   Number         0  principal.o ABSOLUTE
     Src\startup-rvds.s                       0x00000000   Number         0  startup-rvds.o ABSOLUTE
     Trigo.asm                                0x00000000   Number         0  trigo.o ABSOLUTE
@@ -203,24 +205,24 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x000000ec   Data   RO            3    RESET               startup-rvds.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO           44  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO           47    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO           50    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO           52    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO           54    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO           55    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO           57    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO           59    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO           48    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x080000ec   0x080000ec   0x00000000   Code   RO           45  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x080000ec   0x00000004   Code   RO           48    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x080000f0   0x00000004   Code   RO           51    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO           53    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x080000f4   0x00000000   Code   RO           55    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x080000f4   0x00000008   Code   RO           56    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO           58    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x080000fc   0x00000000   Code   RO           60    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x080000fc   0x00000004   Code   RO           49    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000100   0x08000100   0x0000004c   Code   RO            4    .text               startup-rvds.o
-    0x0800014c   0x0800014c   0x00000024   Code   RO           61    .text               mc_w.l(init.o)
-    0x08000170   0x08000170   0x0000000e   Code   RO           65    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800017e   0x0800017e   0x00000002   Code   RO           66    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08000180   0x08000180   0x0000000e   Code   RO           67    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800014c   0x0800014c   0x00000024   Code   RO           62    .text               mc_w.l(init.o)
+    0x08000170   0x08000170   0x0000000e   Code   RO           66    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800017e   0x0800017e   0x00000002   Code   RO           67    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08000180   0x08000180   0x0000000e   Code   RO           68    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0800018e   0x0800018e   0x00000002   PAD
     0x08000190   0x08000190   0x00000024   Code   RO           10    i.main              principal.o
     0x080001b4   0x080001b4   0x0000006c   Code   RO           37    moncode             dft.o
-    0x08000220   0x08000220   0x00000010   Data   RO           63    Region$$Table       anon$$obj.o
+    0x08000220   0x08000220   0x00000010   Data   RO           64    Region$$Table       anon$$obj.o
     0x08000230   0x08000230   0x00000080   Data   RO           41    Signal              signal.o
     0x080002b0   0x080002b0   0x00000100   Data   RO           42    Trigo               trigo.o
 

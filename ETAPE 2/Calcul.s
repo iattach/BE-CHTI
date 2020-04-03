@@ -29,7 +29,7 @@ calcul proc
 	add	r0,r1,r2		;r0=r1+r2	sin^2+cos^2
 	pop 	{r4}			;dépiler/vider r4
 	pop	{lr}			
-	bx	lr	;sauter dans l'adresse de la fonction de c
+	bx	lr			;sauter dans l'adresse de la fonction de c
 	
 	endp
 	end

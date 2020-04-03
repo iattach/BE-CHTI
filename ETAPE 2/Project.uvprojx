@@ -417,6 +417,11 @@
               <FileType>2</FileType>
               <FilePath>.\Signal90.asm</FilePath>
             </File>
+            <File>
+              <FileName>SignalA0.5.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\SignalA0.5.asm</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
