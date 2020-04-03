@@ -8,7 +8,7 @@
 	import TabSin
 	import TabCos
 		
-calcul proc
+calcul  proc
 	push	{lr,r4-r6}		;l'adresse de la programme dans la pile
 
 	mov	r12 ,#1			;donner	2 octets dans r12

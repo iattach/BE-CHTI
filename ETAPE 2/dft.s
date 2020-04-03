@@ -33,7 +33,7 @@ Mk	proc
 	mov	r0,r8			;r0=>r8	32bit*32bit=64bit on garde seulement le high pour le 32bit
 
 
-	pop	{lr,r7-r9}			;dépiler lr
+	pop	{lr,r7-r9}		;dépiler lr
 	bx	lr
 	
 	endp
@@ -57,7 +57,7 @@ Debut
 	mul	r5,r3,r1		;r5=r3*r1 =>k*i
 					;r1 => la valeur de k
 	
-	and	r5,#0xBF		;(ik)/N=64 =>0xBF
+	and	r5,#0x3F		;(ik)/N=64 =>0xBF
 	
 	ldrsh 	r6,[r2,r5,lsl #1]	;r6=r2+r5*2^1 (lsl #1=decalage à gauche =2^#1=10(binaire))
 					;r2 l'adresse de la table (cos ou sin)
