@@ -14,7 +14,4 @@ I (D:\Users\machilus\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Inc
 I (.\RTE\_Simu\etat.h)(0x5E6F228A)
 F (.\test.s)(0x5E73220B)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I.\RTE\_Simu-ID:\Users\machilus\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include-ID:\Users\machilus\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include--pd "__UVISION_VERSION SETA 529" --pd "_RTE_ SETA 1" --pd "STM32F10X_MD SETA 1"--list test.lst --xref -o .\obj\test.o --depend .\obj\test.d)
 I (etat.inc)(0x5E6F228A)
-F (.\RTE\_Simu\etat.h)(0x5E6F228A)()
-F (.\etat.inc)(0x5E6F228A)()
-F (.\RTE\_Simu\gassp72.h)(0x5E6F228A)()
 F (.\RTE\_Simu\gassp72.lib)(0x5E6F228A)()

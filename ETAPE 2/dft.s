@@ -11,15 +11,15 @@
 N 	equ 64				;N = 64
 
 Mk	proc
-	push	{lr}			;empiler lr
+	push	{lr,r7-r9}			;empiler lr
 
 	ldr	r2,=TabCos		;r2=cos 
 	
-	push	{r9}
+
 	mov	r9,r0			;r9=r0 r0 =>l'adresse du table signal
 	bl	Sigma			;sauter dans le calcul de la partie réel
 					;r12 resultat partie reel
-	push	{r7-r8}
+	
 	smull	r7,r8,r12,r12		;32 bit high =>r8 ; 32 bit low=>r7 
 					
 	
@@ -32,8 +32,8 @@ Mk	proc
 	
 	mov	r0,r8			;r0=>r8	32bit*32bit=64bit on garde seulement le high pour le 32bit
 
-	pop	{r7-r9}
-	pop	{lr}			;dépiler lr
+
+	pop	{lr,r7-r9}			;dépiler lr
 	bx	lr
 	
 	endp
@@ -49,17 +49,16 @@ Debut
 
 	;partie sinon
 
-	push	{r4}			;empiler/utiliser r4
+	push	{r4-r6}			;empiler/utiliser r4-r6
+
 	ldrsh 	r4,[r0,r3,lsl #1]	;r4=r0+r3*2^1 (lsl #1=decalage à gauche =2^#1=10(binaire))
 					;r0 =>	l'adresse de base du signal
 
-	push	{r5}			;empiler/utiliser r5
 	mul	r5,r3,r1		;r5=r3*r1 =>k*i
 					;r1 => la valeur de k
 	
 	and	r5,#0xBF		;(ik)%N=64 =>0xBF
 	
-	push	{r6}			;empiler/utiliser r5	recupperer cos/sin dans r5
 	ldrsh 	r6,[r2,r5,lsl #1]	;r6=r2+r5*2^1 (lsl #1=decalage à gauche =2^#1=10(binaire))
 					;r2 l'adresse de la table (cos ou sin)
 	

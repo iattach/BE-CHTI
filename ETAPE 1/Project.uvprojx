@@ -398,21 +398,6 @@
               <FilePath>.\test.s</FilePath>
             </File>
             <File>
-              <FileName>etat.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\RTE\_Simu\etat.h</FilePath>
-            </File>
-            <File>
-              <FileName>etat.inc</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\etat.inc</FilePath>
-            </File>
-            <File>
-              <FileName>gassp72.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\RTE\_Simu\gassp72.h</FilePath>
-            </File>
-            <File>
               <FileName>gassp72.lib</FileName>
               <FileType>4</FileType>
               <FilePath>.\RTE\_Simu\gassp72.lib</FilePath>
@@ -814,21 +799,6 @@
               <FileName>test.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\test.s</FilePath>
-            </File>
-            <File>
-              <FileName>etat.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\RTE\_Simu\etat.h</FilePath>
-            </File>
-            <File>
-              <FileName>etat.inc</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\etat.inc</FilePath>
-            </File>
-            <File>
-              <FileName>gassp72.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\RTE\_Simu\gassp72.h</FilePath>
             </File>
             <File>
               <FileName>gassp72.lib</FileName>
