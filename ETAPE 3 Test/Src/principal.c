@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "gassp72.h"
 #define N 64
-#define SYSTICK_PER 1440000 
-#define SEUIL 0xf0400
+#define SYSTICK_PER 1440000 //20ms=72*20 000= 1440 000
+#define SEUIL 0xf0400 // 984064 => E.F=32.0 =>0xf0400
 
 //soit 20 ms
 
@@ -14,6 +14,7 @@
 vu16 dma_buf[64];
 int Mk(vu16*,int);	//32 bit => int 
 int compteur[6]={0,0,0,0,0,0};//compteur
+int score[6]={0,0,0,0,0,0};
 
 void sys_callback(){
 
@@ -29,6 +30,10 @@ void sys_callback(){
 			compteur[f]++;
 		} else{
 			compteur[f]=0;
+		}
+		if (compteur[f]>3){
+			compteur[f]=0;
+			score[f]++;
 		}
 	}	
 

@@ -297,11 +297,11 @@ Image Symbol Table
     i.fake_timer_callback                    0x08000d30   Section        0  adc_fake.o(i.fake_timer_callback)
     i.main                                   0x08000d4c   Section        0  principal.o(i.main)
     i.sys_callback                           0x08000ddc   Section        0  principal.o(i.sys_callback)
-    moncode                                  0x08000e4c   Section       92  dft.o(moncode)
-    Sigma                                    0x08000e71   Thumb Code    48  dft.o(moncode)
-    .constdata                               0x08000ea8   Section       24  principal.o(.constdata)
-    FakeTab                                  0x08000ec0   Section      256  libcos.o(FakeTab)
-    Trigo                                    0x08000fe0   Section      256  trigo.o(Trigo)
+    moncode                                  0x08000e70   Section       92  dft.o(moncode)
+    Sigma                                    0x08000e95   Thumb Code    48  dft.o(moncode)
+    .constdata                               0x08000ecc   Section       24  principal.o(.constdata)
+    FakeTab                                  0x08000ee4   Section      256  libcos.o(FakeTab)
+    Trigo                                    0x08001004   Section      256  trigo.o(Trigo)
     .data                                    0x20000000   Section        4  timer_systick.o(.data)
     Ptr_Systick                              0x20000000   Data           4  timer_systick.o(.data)
     .data                                    0x20000004   Section      160  timer_1234.o(.data)
@@ -333,10 +333,10 @@ Image Symbol Table
     Date_T2                                  0x2000008c   Data           8  timer_1234.o(.data)
     Date_T3                                  0x20000094   Data           8  timer_1234.o(.data)
     Date_T4                                  0x2000009c   Data           8  timer_1234.o(.data)
-    .bss                                     0x200000a4   Section      152  principal.o(.bss)
-    .bss                                     0x2000013c   Section       84  adc_fake.o(.bss)
-    F                                        0x2000013c   Data          84  adc_fake.o(.bss)
-    STACK                                    0x20000190   Section     1024  startup-rvds.o(STACK)
+    .bss                                     0x200000a4   Section      176  principal.o(.bss)
+    .bss                                     0x20000154   Section       84  adc_fake.o(.bss)
+    F                                        0x20000154   Data          84  adc_fake.o(.bss)
+    STACK                                    0x200001a8   Section     1024  startup-rvds.o(STACK)
 
     Global Symbols
 
@@ -440,14 +440,14 @@ Image Symbol Table
     __scatterload_zeroinit                   0x08000d21   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     fake_timer_callback                      0x08000d31   Thumb Code    22  adc_fake.o(i.fake_timer_callback)
     main                                     0x08000d4d   Thumb Code   118  principal.o(i.main)
-    sys_callback                             0x08000ddd   Thumb Code    90  principal.o(i.sys_callback)
-    Mk                                       0x08000e4d   Thumb Code    36  dft.o(moncode)
-    LibCos                                   0x08000ec0   Data           0  libcos.o(FakeTab)
-    LibNoise                                 0x08000f40   Data           0  libcos.o(FakeTab)
-    Region$$Table$$Base                      0x08000fc0   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000fe0   Number         0  anon$$obj.o(Region$$Table)
-    TabCos                                   0x08000fe0   Data           0  trigo.o(Trigo)
-    TabSin                                   0x08001060   Data           0  trigo.o(Trigo)
+    sys_callback                             0x08000ddd   Thumb Code   122  principal.o(i.sys_callback)
+    Mk                                       0x08000e71   Thumb Code    36  dft.o(moncode)
+    LibCos                                   0x08000ee4   Data           0  libcos.o(FakeTab)
+    LibNoise                                 0x08000f64   Data           0  libcos.o(FakeTab)
+    Region$$Table$$Base                      0x08000fe4   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001004   Number         0  anon$$obj.o(Region$$Table)
+    TabCos                                   0x08001004   Data           0  trigo.o(Trigo)
+    TabSin                                   0x08001084   Data           0  trigo.o(Trigo)
     Enable_Fct_IT_Compare_Match_TIM1_Voie1   0x20000004   Data           1  timer_1234.o(.data)
     Enable_Fct_IT_Compare_Match_TIM1_Voie2   0x20000005   Data           1  timer_1234.o(.data)
     Enable_Fct_IT_Compare_Match_TIM1_Voie3   0x20000006   Data           1  timer_1234.o(.data)
@@ -466,7 +466,8 @@ Image Symbol Table
     Enable_Fct_IT_Compare_Match_TIM4_Voie4   0x20000013   Data           1  timer_1234.o(.data)
     dma_buf                                  0x200000a4   Data         128  principal.o(.bss)
     compteur                                 0x20000124   Data          24  principal.o(.bss)
-    __initial_sp                             0x20000590   Data           0  startup-rvds.o(STACK)
+    score                                    0x2000013c   Data          24  principal.o(.bss)
+    __initial_sp                             0x200005a8   Data           0  startup-rvds.o(STACK)
 
 
 
@@ -476,9 +477,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001184, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000011a8, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000010e0, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001104, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -525,23 +526,23 @@ Memory Map of the image
     0x08000d2e   0x08000d2e   0x00000002   PAD
     0x08000d30   0x08000d30   0x0000001c   Code   RO          144    i.fake_timer_callback  gfssp72.lib(adc_fake.o)
     0x08000d4c   0x08000d4c   0x00000090   Code   RO           13    i.main              principal.o
-    0x08000ddc   0x08000ddc   0x00000070   Code   RO           14    i.sys_callback      principal.o
-    0x08000e4c   0x08000e4c   0x0000005c   Code   RO           84    moncode             dft.o
-    0x08000ea8   0x08000ea8   0x00000018   Data   RO           16    .constdata          principal.o
-    0x08000ec0   0x08000ec0   0x00000100   Data   RO          193    FakeTab             gfssp72.lib(libcos.o)
-    0x08000fc0   0x08000fc0   0x00000020   Data   RO          252    Region$$Table       anon$$obj.o
-    0x08000fe0   0x08000fe0   0x00000100   Data   RO           89    Trigo               trigo.o
+    0x08000ddc   0x08000ddc   0x00000094   Code   RO           14    i.sys_callback      principal.o
+    0x08000e70   0x08000e70   0x0000005c   Code   RO           84    moncode             dft.o
+    0x08000ecc   0x08000ecc   0x00000018   Data   RO           16    .constdata          principal.o
+    0x08000ee4   0x08000ee4   0x00000100   Data   RO          193    FakeTab             gfssp72.lib(libcos.o)
+    0x08000fe4   0x08000fe4   0x00000020   Data   RO          252    Region$$Table       anon$$obj.o
+    0x08001004   0x08001004   0x00000100   Data   RO           89    Trigo               trigo.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080010e0, Size: 0x00000590, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001104, Size: 0x000005a8, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080010e0   0x00000004   Data   RW          127    .data               gfssp72.lib(timer_systick.o)
-    0x20000004   0x080010e4   0x000000a0   Data   RW          174    .data               gfssp72.lib(timer_1234.o)
-    0x200000a4        -       0x00000098   Zero   RW           15    .bss                principal.o
-    0x2000013c        -       0x00000054   Zero   RW          145    .bss                gfssp72.lib(adc_fake.o)
-    0x20000190        -       0x00000400   Zero   RW            1    STACK               startup-rvds.o
+    0x20000000   0x08001104   0x00000004   Data   RW          127    .data               gfssp72.lib(timer_systick.o)
+    0x20000004   0x08001108   0x000000a0   Data   RW          174    .data               gfssp72.lib(timer_1234.o)
+    0x200000a4        -       0x000000b0   Zero   RW           15    .bss                principal.o
+    0x20000154        -       0x00000054   Zero   RW          145    .bss                gfssp72.lib(adc_fake.o)
+    0x200001a8        -       0x00000400   Zero   RW            1    STACK               startup-rvds.o
 
 
 ==============================================================================
@@ -552,12 +553,12 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
         92          8          0          0          0        352   dft.o
-       256         48         24          0        152     208021   principal.o
+       292         52         24          0        176     208071   principal.o
         76         20        236          0       1024        840   startup-rvds.o
          0          0        256          0          0          0   trigo.o
 
     ----------------------------------------------------------------------
-       424         76        548          0       1176     209213   Object Totals
+       460         80        548          0       1200     209263   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -604,15 +605,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      3516        362        804        164       1260     210113   Grand Totals
-      3516        362        804        164       1260     210113   ELF Image Totals
-      3516        362        804        164          0          0   ROM Totals
+      3552        366        804        164       1284     210163   Grand Totals
+      3552        366        804        164       1284     210163   ELF Image Totals
+      3552        366        804        164          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 4320 (   4.22kB)
-    Total RW  Size (RW Data + ZI Data)              1424 (   1.39kB)
-    Total ROM Size (Code + RO Data + RW Data)       4484 (   4.38kB)
+    Total RO  Size (Code + RO Data)                 4356 (   4.25kB)
+    Total RW  Size (RW Data + ZI Data)              1448 (   1.41kB)
+    Total ROM Size (Code + RO Data + RW Data)       4520 (   4.41kB)
 
 ==============================================================================
 
