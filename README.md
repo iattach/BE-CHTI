@@ -12,7 +12,9 @@ Etape 1: Fait -> ETAPE 1/...<br>
 
 Etape 2.1: Fait -> ETAPE 2/Calcul.s<br>
 
-Etape 2.2: Fait -> ETAPE 2/dft.s<br>
+Etape 2.2 / Objet 1: Fait -> ETAPE 2/dft.s<br>
+
+Etape 3 / objet 2 : Fait -> ETAPE 3 
 
 Etape 2 Test
 ----
@@ -42,6 +44,10 @@ Speed :
 
 Size :
 
+Etape 3 Test
+----
+Exécutez le program, la table de scores va s'incrémenter, au final on aura 1,2,3,4,F dans la table de scores 
+qui correspondent aux 1 tir, 2 tirs , 3 tirs , 4 tirs , 5 tirs du signal.1 et 15 tirs du signal.2 
 
 Rapport
 ----
