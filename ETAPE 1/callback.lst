@@ -1,0 +1,230 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; ce programme est pour l'assembleur RealView (Keil)
+    2 00000000                 thumb
+    3 00000000         
+    4 00000000                 area             madata, data, readwrite
+    5 00000000 00000000 
+                       FLAG    dcd              0x0000
+    6 00000004                 import           etat
+    7 00000004                 export           timer_callback
+    8 00000004                 include          etat.inc
+    1 00000004 4000043C 
+                       TIM3_CCR3
+                               equ              0x4000043C  ;
+    2 00000004         
+    3 00000004         ;typedef struct {
+    4 00000004         ;int position;  // 0
+    5 00000004         ;int taille;  // 4
+    6 00000004         ;void * son;  // 8
+    7 00000004         ;int resolution; // 12
+    8 00000004         ;int periode_ticks; // 16
+    9 00000004         ;} type_etat;
+   10 00000004         
+   11 00000004         ;/*
+   12 00000004         
+   13 00000004 00000000 
+                       E_POS   equ              0
+   14 00000004 00000004 
+                       E_TAI   equ              4
+   15 00000004 00000008 
+                       E_SON   equ              8
+   16 00000004 0000000C 
+                       E_RES   equ              12
+   17 00000004 00000010 
+                       E_PER   equ              16
+   18 00000004                 end
+    9 00000004         
+   10 00000004                 area             moncode, code, readonly
+   11 00000000         
+   12 00000000         
+   13 00000000         
+   14 00000000         
+   15 00000000         timer_callback
+                               proc
+   16 00000000         
+   17 00000000 B410            push             {r4}
+   18 00000002 480C            ldr              r0, =etat   ;
+   19 00000004 4B0C            ldr              r3, =TIM3_CCR3 ;
+   20 00000006 6802            ldr              r2, [r0,#E_POS] ;
+   21 00000008 F8D0 C004       ldr              r12, [r0,#E_TAI] ;
+   22 0000000C         
+   23 0000000C         ;comparaison entre la taille et la position
+   24 0000000C 4594            cmp              r12, r2
+   25 0000000E D00F            beq              Fin
+   26 00000010         
+   27 00000010         ;conversion
+   28 00000010         ;index incemente courant dans le tableau d'échantillons
+                        du son
+   29 00000010 6881            ldr              r1,[r0,#E_SON]
+   30 00000012 F931 4012       ldrsh            r4,[r1,r2,lsl #1]
+   31 00000016         
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   32 00000016         ;multiplier par 720(resolution)
+   33 00000016 F8D0 C00C       ldr              r12,[r0,#E_RES]
+   34 0000001A FB04 F40C       mul              r4, r12
+   35 0000001E         
+   36 0000001E         ;diviser par 2^16
+   37 0000001E EA4F 4424       asr              r4, #16
+   38 00000022         
+   39 00000022         ;le offset 
+   40 00000022 EA4F 0C6C       asr              r12, #1
+   41 00000026 4464            add              r4, r12
+   42 00000028         
+   43 00000028         ;la valeur convertie dans TIM3_CCR3
+   44 00000028 601C            str              r4,[r3]
+   45 0000002A         
+   46 0000002A         ;position incremente par 1
+   47 0000002A F102 0201       add              r2,#1
+   48 0000002E 6002            str              r2, [r0,#E_POS]
+   49 00000030         
+   50 00000030         
+   51 00000030         Fin
+   52 00000030 BC10            pop              {r4}
+   53 00000032 4770            bx               lr
+   54 00000034                 endp
+   55 00000034                 end
+              00000000 
+              4000043C 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\obj\callback.d -o.\obj\callback.o -I.\RTE\_Simu -ID:\Users\machi
+lus\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include -ID:\Users\machi
+lus\AppData\Local\Arm\Packs\Keil\STM32F1xx_DFP\2.3.0\Device\Include --predefine
+="__EVAL SETA 1" --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION
+ SETA 529" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_MD SETA 1" --list=
+callback.lst callback.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+FLAG 00000000
+
+Symbol: FLAG
+   Definitions
+      At line 5 in file callback.s
+   Uses
+      None
+Comment: FLAG unused
+madata 00000000
+
+Symbol: madata
+   Definitions
+      At line 4 in file callback.s
+   Uses
+      None
+Comment: madata unused
+2 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Fin 00000030
+
+Symbol: Fin
+   Definitions
+      At line 51 in file callback.s
+   Uses
+      At line 25 in file callback.s
+Comment: Fin used once
+moncode 00000000
+
+Symbol: moncode
+   Definitions
+      At line 10 in file callback.s
+   Uses
+      None
+Comment: moncode unused
+timer_callback 00000000
+
+Symbol: timer_callback
+   Definitions
+      At line 15 in file callback.s
+   Uses
+      At line 7 in file callback.s
+Comment: timer_callback used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+E_PER 00000010
+
+Symbol: E_PER
+   Definitions
+      At line 17 in file etat.inc
+   Uses
+      None
+Comment: E_PER unused
+E_POS 00000000
+
+Symbol: E_POS
+   Definitions
+      At line 13 in file etat.inc
+   Uses
+      At line 20 in file callback.s
+      At line 48 in file callback.s
+
+E_RES 0000000C
+
+Symbol: E_RES
+   Definitions
+      At line 16 in file etat.inc
+   Uses
+      At line 33 in file callback.s
+Comment: E_RES used once
+E_SON 00000008
+
+Symbol: E_SON
+   Definitions
+      At line 15 in file etat.inc
+   Uses
+      At line 29 in file callback.s
+Comment: E_SON used once
+E_TAI 00000004
+
+Symbol: E_TAI
+   Definitions
+      At line 14 in file etat.inc
+   Uses
+      At line 21 in file callback.s
+Comment: E_TAI used once
+TIM3_CCR3 4000043C
+
+Symbol: TIM3_CCR3
+   Definitions
+      At line 1 in file etat.inc
+   Uses
+      At line 19 in file callback.s
+Comment: TIM3_CCR3 used once
+6 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+etat 00000000
+
+Symbol: etat
+   Definitions
+      At line 6 in file callback.s
+   Uses
+      At line 18 in file callback.s
+Comment: etat used once
+1 symbol
+349 symbols in table

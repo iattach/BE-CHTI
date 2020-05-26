@@ -393,14 +393,19 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>test.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\test.s</FilePath>
-            </File>
-            <File>
               <FileName>gassp72.lib</FileName>
               <FileType>4</FileType>
               <FilePath>.\RTE\_Simu\gassp72.lib</FilePath>
+            </File>
+            <File>
+              <FileName>callback.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\callback.s</FilePath>
+            </File>
+            <File>
+              <FileName>bruitverre.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\bruitverre.asm</FilePath>
             </File>
           </Files>
         </Group>
@@ -796,14 +801,19 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>test.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\test.s</FilePath>
-            </File>
-            <File>
               <FileName>gassp72.lib</FileName>
               <FileType>4</FileType>
               <FilePath>.\RTE\_Simu\gassp72.lib</FilePath>
+            </File>
+            <File>
+              <FileName>callback.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\callback.s</FilePath>
+            </File>
+            <File>
+              <FileName>bruitverre.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\bruitverre.asm</FilePath>
             </File>
           </Files>
         </Group>
