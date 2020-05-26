@@ -16,6 +16,8 @@ Etape 2.2 / Objet 1: Fait -> ETAPE 2/dft.s<br>
 
 Etape 3 / objet 2 : Fait -> ETAPE 3 
 
+Etape 1.3 / objet 3 : Fait -> ETAPE 1
+
 Etape 2 Test
 ----
 Signal.asm : phase 0 degré | amplitude 2048
@@ -51,4 +53,4 @@ qui correspondent aux 1 tir, 2 tirs , 3 tirs , 4 tirs , 5 tirs du signal.1 et 15
 
 Rapport
 ----
-On a précisé les avancements dans le [Rapport d’avancement _ BE intégration, partie ASM](https://github.com/iattach/BE-CHTI/blob/master/Rapport%20d%E2%80%99avancement%20_%20BE%20int%C3%A9gration%2C%20partie%20ASM.pdf)
+On a précisé les avancements dans le [Rapport d’avancement _ BE intégration, partie ASM](https://docs.google.com/document/d/1P1_2JFUTs7jzwzXKNZZaIuAOqxM8Aoy0CBaJVVXSG_U/edit?usp=sharing) rédigé par Google doc 
