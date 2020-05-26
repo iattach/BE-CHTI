@@ -12,11 +12,11 @@ Etape 1: Fait -> ETAPE 1/...<br>
 
 Etape 2.1: Fait -> ETAPE 2/Calcul.s<br>
 
-Etape 2.2 / Objet 1: Fait -> ETAPE 2/dft.s<br>
+Etape 2.2 / objectif 1: Fait -> ETAPE 2/dft.s<br>
 
-Etape 3 / objet 2 : Fait -> ETAPE 3 
+Etape 3 / objectif 2 : Fait -> ETAPE 3 
 
-Etape 1.3 / objet 3 : Fait -> ETAPE 1
+Etape 1.3 / objectif 3 : Fait -> ETAPE 1
 
 Etape 2 Test
 ----
