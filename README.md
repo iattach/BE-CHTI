@@ -26,7 +26,7 @@ Signal90.asm : phase -90 degrés | amplitude 2048
 
 Indication pour faire les tests dans l'étape 2.2
 ----
-Afin de faire les tests différents, veuillez changer les codes suivants dans le ETAPE 2/Src/principal.c:
+Afin de faire les tests différents, veuillez changer les codes suivants dans le Obj1/Src/principal.c:
 
 ```
 extern short TabSig[64];//importer le signal simulé
