@@ -24,7 +24,7 @@ Signal.asm : phase 0 degré | amplitude 2048
 
 Signal90.asm : phase -90 degrés | amplitude 2048
 
-Indication pour faire les tests dans l'étape 2.2
+Indication pour faire les tests dans l'Obj 1
 ----
 Afin de faire les tests différents, veuillez changer les codes suivants dans le Obj1/Src/principal.c:
 
