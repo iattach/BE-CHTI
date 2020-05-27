@@ -8,18 +8,18 @@ Yuyuan YANG
 
 Avancement
 ----
-Etape 1: Fait -> ETAPE 1/...<br>
+Obj1 -> fait
 
-Etape 2.1: Fait -> ETAPE 2/Calcul.s<br>
+Obj2 -> fait
 
-Etape 2.2 / objectif 1: Fait -> ETAPE 2/dft.s<br>
+Obj3 -> fait
 
-Etape 3 / objectif 2 : Fait -> ETAPE 3 
+Obj4 -> en cours
 
-Etape 1.3 / objectif 3 : Fait -> ETAPE 1
-
-Etape 2 Test
+Obj 1 Test
 ----
+
+
 Signal.asm : phase 0 degré | amplitude 2048
 
 Signal90.asm : phase -90 degrés | amplitude 2048
@@ -39,22 +39,21 @@ Signal.asm : TabSig
 
 Signal90.asm : TabSig1
 
-Performmance
----
-Speed :  
-0.00068275-0.00029088=0.00039187 sec
-
-Size :
-
-Etape 3 Test
+Obj 2 Test
 ----
-Exécutez le program, la table de scores va s'incrémenter, au final on aura 1,2,3,4,F dans la table de scores 
-qui correspondent aux 1 tir, 2 tirs , 3 tirs , 4 tirs , 5 tirs du signal.1 et 15 tirs du signal.2 
+Exécutez le program, la table de scores va s'incrémenter, au final on aura 1,2,3,4,F 
 
-Etape 4 Test
+Dans la table de scores ils correspondent aux 1 tir, 2 tirs , 3 tirs , 4 tirs , 5 tirs du signal.1 et 15 tirs du signal.2 
+
+Obj 3 Test
 ----
-Exécutez le program, la table de scores va s'incrémenter, au final on aura 1,2,3,4,F dans la table de scores 
-qui correspondent aux 1 tir, 2 tirs , 3 tirs , 4 tirs , 5 tirs du signal.1 et 15 tirs du signal.2 
+Les résultats sont bien comme l'image dans le rapport ici : 
+
+![image]()
+
+Obj 4 Test
+----
+En cours
 
 Rapport
 ----
