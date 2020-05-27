@@ -14,7 +14,7 @@ Obj2 -> fait
 
 Obj3 -> fait
 
-Obj4 -> en cours
+Obj4 -> fait
 
 Obj 1 Test
 ----

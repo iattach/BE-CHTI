@@ -407,6 +407,16 @@
               <FileType>2</FileType>
               <FilePath>.\bruitverre.asm</FilePath>
             </File>
+            <File>
+              <FileName>dft.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\dft.s</FilePath>
+            </File>
+            <File>
+              <FileName>Trigo.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Trigo.asm</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -814,6 +824,16 @@
               <FileName>bruitverre.asm</FileName>
               <FileType>2</FileType>
               <FilePath>.\bruitverre.asm</FilePath>
+            </File>
+            <File>
+              <FileName>dft.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\dft.s</FilePath>
+            </File>
+            <File>
+              <FileName>Trigo.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Trigo.asm</FilePath>
             </File>
           </Files>
         </Group>
