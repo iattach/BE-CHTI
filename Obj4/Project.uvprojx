@@ -393,19 +393,9 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>gassp72.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>.\RTE\_Simu\gassp72.lib</FilePath>
-            </File>
-            <File>
-              <FileName>callback.s</FileName>
+              <FileName>Calcul.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\callback.s</FilePath>
-            </File>
-            <File>
-              <FileName>bruitverre.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\bruitverre.asm</FilePath>
+              <FilePath>.\Calcul.s</FilePath>
             </File>
             <File>
               <FileName>dft.s</FileName>
@@ -413,9 +403,49 @@
               <FilePath>.\dft.s</FilePath>
             </File>
             <File>
+              <FileName>Signal.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Signal.asm</FilePath>
+            </File>
+            <File>
               <FileName>Trigo.asm</FileName>
               <FileType>2</FileType>
               <FilePath>.\Trigo.asm</FilePath>
+            </File>
+            <File>
+              <FileName>Signal90.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Signal90.asm</FilePath>
+            </File>
+            <File>
+              <FileName>SignalA0.5.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\SignalA0.5.asm</FilePath>
+            </File>
+            <File>
+              <FileName>gfssp72.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\GFSSP72\gfssp72.lib</FilePath>
+            </File>
+            <File>
+              <FileName>etat.inc</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\etat.inc</FilePath>
+            </File>
+            <File>
+              <FileName>bruitverre.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\bruitverre.asm</FilePath>
+            </File>
+            <File>
+              <FileName>callback.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\callback.s</FilePath>
+            </File>
+            <File>
+              <FileName>etat.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RTE\_Simu\etat.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -425,7 +455,7 @@
       </Groups>
     </Target>
     <Target>
-      <TargetName>reel</TargetName>
+      <TargetName>_reel</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
       <pCCUsed>5060750::V5.06 update 6 (build 750)::ARMCC</pCCUsed>
@@ -811,19 +841,9 @@
               <FilePath>.\Src\principal.c</FilePath>
             </File>
             <File>
-              <FileName>gassp72.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>.\RTE\_Simu\gassp72.lib</FilePath>
-            </File>
-            <File>
-              <FileName>callback.s</FileName>
+              <FileName>Calcul.s</FileName>
               <FileType>2</FileType>
-              <FilePath>.\callback.s</FilePath>
-            </File>
-            <File>
-              <FileName>bruitverre.asm</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\bruitverre.asm</FilePath>
+              <FilePath>.\Calcul.s</FilePath>
             </File>
             <File>
               <FileName>dft.s</FileName>
@@ -831,9 +851,49 @@
               <FilePath>.\dft.s</FilePath>
             </File>
             <File>
+              <FileName>Signal.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Signal.asm</FilePath>
+            </File>
+            <File>
               <FileName>Trigo.asm</FileName>
               <FileType>2</FileType>
               <FilePath>.\Trigo.asm</FilePath>
+            </File>
+            <File>
+              <FileName>Signal90.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\Signal90.asm</FilePath>
+            </File>
+            <File>
+              <FileName>SignalA0.5.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\SignalA0.5.asm</FilePath>
+            </File>
+            <File>
+              <FileName>gfssp72.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\GFSSP72\gfssp72.lib</FilePath>
+            </File>
+            <File>
+              <FileName>etat.inc</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\etat.inc</FilePath>
+            </File>
+            <File>
+              <FileName>bruitverre.asm</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\bruitverre.asm</FilePath>
+            </File>
+            <File>
+              <FileName>callback.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\callback.s</FilePath>
+            </File>
+            <File>
+              <FileName>etat.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\RTE\_Simu\etat.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -851,7 +911,7 @@
         <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="4.5.0"/>
         <targetInfos>
           <targetInfo name="Simu"/>
-          <targetInfo name="reel"/>
+          <targetInfo name="_reel"/>
         </targetInfos>
       </component>
     </components>

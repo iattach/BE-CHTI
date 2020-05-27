@@ -1,11 +1,15 @@
 --cpu Cortex-M3
 ".\obj\startup-rvds.o"
 ".\obj\principal.o"
-".\RTE\_Simu\gassp72.lib"
-".\obj\callback.o"
-".\obj\bruitverre.o"
+".\obj\calcul.o"
 ".\obj\dft.o"
+".\obj\signal.o"
 ".\obj\trigo.o"
+".\obj\signal90.o"
+".\obj\signala0.5.o"
+"..\GFSSP72\gfssp72.lib"
+".\obj\bruitverre.o"
+".\obj\callback.o"
 --library_type=microlib --strict --scatter ".\Obj\CHTI.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

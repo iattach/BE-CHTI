@@ -53,7 +53,7 @@ Les résultats sont bien comme l'image dans le rapport ici :
 
 Obj 4 Test
 ----
-En cours
+Le  son est bien émis à cause du tir ou du changement du score 
 
 Rapport
 ----
