@@ -53,8 +53,10 @@ Les résultats sont bien comme l'image dans le rapport ici :
 
 Obj 4 Test
 ----
-Le  son est bien émis à cause du tir ou du changement du score 
+Le son est bien émis en cas de tir. 
+
+![image](https://github.com/iattach/BE-CHTI/raw/master/images_readme/son_signal.png)
 
 Rapport
 ----
-On a précisé les avancements dans le [Rapport d’avancement _ BE intégration, partie ASM](https://docs.google.com/document/d/1P1_2JFUTs7jzwzXKNZZaIuAOqxM8Aoy0CBaJVVXSG_U/edit?usp=sharing) rédigé par Google doc 
+Plus de détails sur la réfléxion et l'implémentation dans le [Rapport d’avancement _ BE intégration, partie ASM](https://docs.google.com/document/d/1P1_2JFUTs7jzwzXKNZZaIuAOqxM8Aoy0CBaJVVXSG_U/edit?usp=sharing) 
